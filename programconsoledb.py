@@ -1,8 +1,9 @@
 import sqlite3
-
-def create_tables(conn, c):
-    c.execute("CREATE TABLE IF NOT EXISTS fruit (name text, quantity integer)")
-
-    c.execute("INSERT INTO fruit VALUES ('Apple', 0), ('Orange', 0)")
+def __init__(self, conn, c):
+    c.execute("CREATE TABLE IF NOT EXISTS user (name text, age integer)")
     conn.commit()
+    
+def print_used(conn, c):
+    print(" -- Current fruit in db --")
+    
     
